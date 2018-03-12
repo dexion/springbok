@@ -3,8 +3,8 @@
 
 import Parser.MatrixFlowParser.MatrixFlowYacc as matrix_flow_parser
 from Parser.MatrixFlowParser.MatrixFlowLex import lexer
-import Gtk.Gtk_QueryPath
-import Gtk.Gtk_Main
+import MyGtk.Gtk_QueryPath
+import MyGtk.Gtk_Main
 from ROBDD.synthesis import synthesize
 from ROBDD.synthesis import Bdd
 

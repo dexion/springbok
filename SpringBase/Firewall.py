@@ -1,11 +1,10 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#import Gtk.Gtk_Main ## remember to uncomment it before use springbok!
+import MyGtk.Gtk_Main ## remember to uncomment it before use springbok!
 from Protocol import Protocol
 from Ip import Ip
 from Port import Port
-#import Gtk.Gtk_Main
 
 
 ######## Modification of the class by Maurice TCHAMGOUE N. on 22-06-2015

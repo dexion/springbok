@@ -15,8 +15,8 @@ from Gtk_TabInterface import Gtk_TabInterface
 from Gtk_ListView import Gtk_ListView
 from Gtk_TreeView import Gtk_TreeView
 from Gtk_SearchBar import Gtk_SearchBar
-from Gtk.Gtk_Matrix_Table import Gtk_Matrix_Table
-from Gtk.Gtk_Nat_Rule import Gtk_Nat_Rule
+from MyGtk.Gtk_Matrix_Table import Gtk_Matrix_Table
+from MyGtk.Gtk_Nat_Rule import Gtk_Nat_Rule
 from Gtk_IPSec_Tunnels import Gtk_IPSec_Tunnels
 from Tools.ReduceRule import ReduceRule
 

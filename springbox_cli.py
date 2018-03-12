@@ -28,7 +28,7 @@ def redirect_standard():
     sys.stderr = SYS_ERR
 
 redirect_null()
-from Gtk import Gtk_Main
+from MyGtk import Gtk_Main
 import Parser.Parser as Parser
 from SpringBase.Protocol import Protocol
 redirect_standard()

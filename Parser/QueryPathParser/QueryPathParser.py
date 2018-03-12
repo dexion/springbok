@@ -3,8 +3,8 @@
 
 import Parser.QueryPathParser.QueryPathYacc as query_parser
 from Parser.QueryPathParser.QueryPathLex import lexer
-import Gtk.Gtk_QueryPath
-import Gtk.Gtk_Main
+import MyGtk.Gtk_QueryPath
+import MyGtk.Gtk_Main
 
 
 class QueryPathParser:

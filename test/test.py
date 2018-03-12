@@ -6,7 +6,7 @@ sys.path.append("../")
 
 import os
 import re
-from Gtk import Gtk_Main
+from MyGtk import Gtk_Main
 
 # Linux console color #
 WHITE = '\033[37m'

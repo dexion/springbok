@@ -3,7 +3,7 @@
 
 import pygtk
 import re
-from Gtk.Gtk_HelpMessage import Gtk_Message
+from MyGtk.Gtk_HelpMessage import Gtk_Message
 
 pygtk.require("2.0")
 import gtk

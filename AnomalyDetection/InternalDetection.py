@@ -10,7 +10,7 @@ from collections import deque
 import multiprocessing
 import time
 import gtk
-import Gtk.Gtk_Main
+import MyGtk.Gtk_Main
 
 
 class InternalDetection:

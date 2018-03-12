@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pygtk
-from Gtk import Gtk_HelpMessage
+from MyGtk import Gtk_HelpMessage
 
 pygtk.require("2.0")
 import gtk

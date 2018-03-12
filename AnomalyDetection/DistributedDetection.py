@@ -11,7 +11,7 @@ import time
 from NetworkGraph import NetworkGraph
 import networkx as nx
 from SpringBase.Firewall import Firewall
-import Gtk.Gtk_Main
+import MyGtk.Gtk_Main
 from SpringBase.Rule import Rule
 from SpringBase.Action import Action
 

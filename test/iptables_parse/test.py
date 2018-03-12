@@ -4,7 +4,7 @@
 import sys
 sys.path.append("../../")
 
-from Gtk import Gtk_Main
+from MyGtk import Gtk_Main
 import Parser.Parser as Parser
 import AnomalyDetection.InternalDetection as InternalDetection
 import NetworkGraph.Node as Node

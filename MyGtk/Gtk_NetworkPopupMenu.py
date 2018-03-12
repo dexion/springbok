@@ -3,7 +3,7 @@
 
 import pygtk
 pygtk.require("2.0")
-from Gtk.Gtk_HelpMessage import Gtk_Message
+from MyGtk.Gtk_HelpMessage import Gtk_Message
 import gtk
 import csv
 import collections
