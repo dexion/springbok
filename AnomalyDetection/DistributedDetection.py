@@ -58,7 +58,7 @@ class DistributedDetection:
         g = NetworkGraph.NetworkGraph().multidigraph
         # reverse graph to compute rooted tree path
         g_reverse = NetworkGraph.NetworkGraph().get_reversed_multidigraph()
-        Gtk.Gtk_Main.Gtk_Main().create_progress_bar("Anomaly detection", count_nb_rules(g, g_reverse), self._cancel_detection)
+        MyGtk.Gtk_Main.Gtk_Main().create_progress_bar("Anomaly detection", count_nb_rules(g, g_reverse), self._cancel_detection)
 
         # Detect path between each couple of node
         for source in g.nodes():
@@ -79,8 +79,8 @@ class DistributedDetection:
         self.error_path = error_list
 
         t1 = time.time()
-        Gtk.Gtk_Main.Gtk_Main().change_statusbar('Anomaly distributed detection process in %.3f secondes' % (t1 - t0))
-        Gtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
+        MyGtk.Gtk_Main.Gtk_Main().change_statusbar('Anomaly distributed detection process in %.3f secondes' % (t1 - t0))
+        MyGtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
 
         return error_list
 
@@ -145,8 +145,8 @@ class DistributedDetection:
                 for rule, action in rule_path:
                     if self.cancel:
                         break
-                    Gtk.Gtk_Main.Gtk_Main().update_progress_bar(1)
-                    Gtk.Gtk_Main.Gtk_Main().update_interface()
+                    MyGtk.Gtk_Main.Gtk_Main().update_progress_bar(1)
+                    MyGtk.Gtk_Main.Gtk_Main().update_interface()
                     error_rules = []
                     rule_action = rule.action.chain if isinstance(rule.action.chain, bool) else action
                     if rule_action:

@@ -62,7 +62,7 @@ class MatrixFlowParser:
         """
         res = {}
 
-        Gtk.Gtk_Main.Gtk_Main().create_progress_bar("Matrix Flow import", len(self.flow_list))
+        MyGtk.Gtk_Main.Gtk_Main().create_progress_bar("Matrix Flow import", len(self.flow_list))
 
         for req in self.flow_list:
             for fw in firewalls_list:
@@ -78,7 +78,7 @@ class MatrixFlowParser:
         for k, v in res.iteritems():
             print k, v
 
-        Gtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
+        MyGtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
         self.result = dict(res)
         return res
 

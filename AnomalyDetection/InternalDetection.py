@@ -62,7 +62,7 @@ class InternalDetection:
                                                                               Robdd.true(), Robdd.false(), Robdd.false(),
                                                                               result_queue, processed_id_rules, self.deep_search)))
 
-        Gtk.Gtk_Main.Gtk_Main().create_progress_bar("Anomaly detection", sum([len(a) for a in acl_list]),
+        MyGtk.Gtk_Main.Gtk_Main().create_progress_bar("Anomaly detection", sum([len(a) for a in acl_list]),
                                                     self._cancel_detection, *(jobs))
 
         # start jobs
@@ -72,8 +72,8 @@ class InternalDetection:
             result += [result_queue.get() for _ in xrange(result_queue.qsize())]
             processed = reduce(lambda x, _: x + 1,
                                [processed_id_rules.get() for _ in xrange(processed_id_rules.qsize())], 0)
-            Gtk.Gtk_Main.Gtk_Main().update_progress_bar(processed)
-            Gtk.Gtk_Main.Gtk_Main().update_interface()
+            MyGtk.Gtk_Main.Gtk_Main().update_progress_bar(processed)
+            MyGtk.Gtk_Main.Gtk_Main().update_interface()
             time.sleep(0.1)
         # wait jobs finish
         for job in jobs: job.join()
@@ -83,8 +83,8 @@ class InternalDetection:
 
         t1 = time.time()
 
-        Gtk.Gtk_Main.Gtk_Main().change_statusbar('Anomaly internal detection process in %.3f secondes' % (t1 - t0))
-        Gtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
+        MyGtk.Gtk_Main.Gtk_Main().change_statusbar('Anomaly internal detection process in %.3f secondes' % (t1 - t0))
+        MyGtk.Gtk_Main.Gtk_Main().destroy_progress_bar()
 
         return result
 
